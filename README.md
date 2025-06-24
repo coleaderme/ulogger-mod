@@ -1,4 +1,4 @@
-# Mod Based on [Bartek Fabiszewski's](https://github.com/bfabiszewski) [ulogger](https://github.com/bfabiszewski/ulogger-android)  
+# [Mod](https://github.com/coleaderme/ulogger-mod) Based on [Bartek Fabiszewski's](https://github.com/bfabiszewski) [ulogger](https://github.com/bfabiszewski/ulogger-android)  
 
 μlogger-mod [micro-logger-mod] is an android application for continuous logging of location coordinates, designed to record hiking, biking tracks and other outdoor activities. Application works in background. Track points are saved automatically at chosen intervals and uploaded to Telegram.  
 
