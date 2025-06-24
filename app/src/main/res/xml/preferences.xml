@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2017 Bartek Fabiszewski
+  ~ http://www.fabiszewski.net
+  ~
+  ~ This file is part of μlogger-android.
+  ~ Licensed under GPL, either version 3, or any later.
+  ~ See <http://www.gnu.org/licenses/>
+  -->
+
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ulogger="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        android:icon="@drawable/ic_location_on_blue_24dp"
+        android:title="@string/pref_cat_location">
+        <net.fabiszewski.ulogger.ui.ListWithEditTextPreference
+            android:defaultValue="@string/pref_mintime_default"
+            android:dialogMessage="@string/pref_mintime_summary"
+            android:entries="@array/minTimeEntries"
+            android:entryValues="@array/minTimeValues"
+            android:key="prefMinTime"
+            android:title="@string/pref_mintime_title"
+            app:useSimpleSummaryProvider="true"
+            ulogger:otherSummary="@string/pref_mintime_other" />
+        <net.fabiszewski.ulogger.ui.ListWithEditTextPreference
+            android:defaultValue="@string/pref_mindistance_default"
+            android:dialogMessage="@string/pref_mindistance_summary"
+            android:entries="@array/minDistanceEntries"
+            android:entryValues="@array/minDistanceValues"
+            android:key="prefMinDistance"
+            android:title="@string/pref_mindistance_title"
+            app:useSimpleSummaryProvider="true"
+            ulogger:otherSummary="@string/pref_mindistance_other" />
+        <net.fabiszewski.ulogger.ui.ListWithEditTextPreference
+            android:defaultValue="@string/pref_minaccuracy_default"
+            android:dialogMessage="@string/pref_minaccuracy_summary"
+            android:entries="@array/minAccuracyEntries"
+            android:entryValues="@array/minAccuracyValues"
+            android:key="prefMinAccuracy"
+            android:title="@string/pref_minaccuracy_title"
+            app:useSimpleSummaryProvider="true"
+            ulogger:otherSummary="@string/pref_minaccuracy_other" />
+        <ListPreference
+            android:dialogMessage="@string/pref_provider_summary"
+            android:entries="@array/providersEntries"
+            android:entryValues="@array/providersValues"
+            android:key="prefProvider"
+            android:title="@string/pref_provider_title"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+
+    <!-- Remove whole "Server" Category -->
+
+    <PreferenceCategory
+        android:icon="@drawable/ic_build_blue_24dp"
+        android:title="@string/pref_cat_other">
+        <SwitchPreferenceCompat
+            android:defaultValue="@string/pref_autostart_default"
+            android:key="prefAutoStart"
+            android:summary="@string/pref_autostart_summary"
+            android:title="@string/pref_autostart_title" />
+    
+    <!-- Remove "allowExternalCommand switch" -->
+
+        <ListPreference
+            android:defaultValue="@string/pref_units_metric"
+            android:dialogMessage="@string/pref_units_summary"
+            android:entries="@array/unitsEntries"
+            android:entryValues="@array/unitsEntries"
+            android:key="prefUnits"
+            android:title="@string/pref_units_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <net.fabiszewski.ulogger.ui.AutoNamePreference
+            android:defaultValue="@string/pref_auto_name_default"
+            android:dialogMessage="@string/pref_auto_name_summary"
+            android:key="prefAutoName"
+            android:title="@string/pref_auto_name_title"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+
+</androidx.preference.PreferenceScreen>
